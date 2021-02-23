@@ -20,3 +20,4 @@ You may also pass in the following attributes:
 ## Todos
 - Window detection/scroll up
 - I'm sure it could be more dry
+- ARIA attributes
