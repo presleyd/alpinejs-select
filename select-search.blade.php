@@ -4,7 +4,7 @@
 ])
 
 <div
-    x-data="IBBRSelect({
+    x-data="AlpineSelect({
         data: {{ json_encode($data) }},
         selected: @entangle($attributes->wire('model')),
         placeholder: '{{ $placeholder }}',
@@ -56,7 +56,7 @@
         >
 
             <div class="bg-white p-2 w-full">
-                <x-input.base type="search" x-model="search" x-on:click.prevent.stop="open=true"/>
+                <input class="block w-full p-2 border border-gray-300 rounded-md focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 sm:text-sm sm:leading-5" type="search" x-model="search" x-on:click.prevent.stop="open=true">
             </div>
 
             <div class="p-2 max-h-60 overflow-y-auto">
@@ -86,7 +86,7 @@
 @once
     @push('body_scripts')
         <script>
-            function IBBRSelect(config) {
+            function AlpineSelect(config) {
                 return {
                     data: config.data,
                     open: false,
