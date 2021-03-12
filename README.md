@@ -8,6 +8,7 @@ Place the blade file wherever you store your blade components (/resources/views/
 Place it into your blade file and pass in the necesary props.
 - data: Available options to be chosen from as an associative array e.g [1 => "First Option, 2 => "Second Option"]
 - placeholder: The text that will appear when nothing is chosen
+- limit: How many <option>s will get rendered. All the data is available for search but it will only render that limit. For VERY long lists this makes a big difference to performance
 
 You may also pass in the following attributes:
 - multiple: Allows users to select more than one element
