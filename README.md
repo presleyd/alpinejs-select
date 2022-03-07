@@ -6,7 +6,10 @@ A reusable Laravel blade component for use with Laravel Livewire for select sear
 Place the blade file wherever you store your blade components (/resources/views/components)
 
 Place it into your blade file and pass in the necesary props.
-- data: Available options to be chosen from as an associative array e.g [1 => "First Option, 2 => "Second Option"]
+- data: Available options to be chosen from as an associative array e.g [1 => "First Option, 2 => "Second Option"] I typically do this with pluck from an eloquent query but any array or collection in this format will do:
+```
+$data = Users::pluck('username','id')
+```
 - placeholder: The text that will appear when nothing is chosen
 - limit: How many option tags will get rendered. All the data is available for search but it will only render that limit. For VERY long lists this makes a big difference to performance
 
